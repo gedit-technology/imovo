@@ -25,4 +25,6 @@ rm -rf "${install_prefix}"
 mkdir -p "${install_prefix}"
 ./configure --prefix="${install_prefix}" --enable-introspection=yes || exit 1
 make || exit 1
-#make install || exit 1
+make check || exit 1 # before install
+make install || exit 1
+make check || exit 1 # after install
