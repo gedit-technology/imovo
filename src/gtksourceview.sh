@@ -24,5 +24,5 @@ install_prefix=~/.imovo/gedit
 rm -rf "${install_prefix}"
 mkdir -p "${install_prefix}"
 # --disable-Werror
-#./configure --prefix="${install_prefix}" --enable-introspection=yes --enable-vala=yes
-./configure --prefix="${install_prefix}"
+#./configure --prefix="${install_prefix}" --enable-vala=yes
+./configure --prefix="${install_prefix}" --enable-introspection=yes
