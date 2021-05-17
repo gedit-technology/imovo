@@ -18,3 +18,4 @@ mkdir -p "${build_prefix}"
 pushd "${build_prefix}"
 cp "${tarball_path}" .
 tar xf "${tarball_filename}"
+pushd "gtksourceview-4.0.40/"
