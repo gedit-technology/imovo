@@ -22,7 +22,10 @@ git checkout master
 mkdir build
 pushd build/
 
-PKG_CONFIG_PATH="${install_prefix}/lib64/pkgconfig" meson --prefix "${install_prefix}" || exit 1
+export PKG_CONFIG_PATH="${install_prefix}/lib64/pkgconfig"
+export XDG_DATA_DIRS="${install_prefix}/share:${XDG_DATA_DIRS}"
+
+meson --prefix "${install_prefix}" || exit 1
 ninja || exit 1
 
 #make check || exit 1 # before install
