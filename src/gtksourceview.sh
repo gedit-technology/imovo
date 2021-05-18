@@ -29,3 +29,12 @@ make || exit 1
 make check || exit 1 # before install
 make install || exit 1
 make check || exit 1 # after install
+
+popd
+popd
+if PKG_CONFIG_PATH="${install_prefix}/lib64/pkgconfig" pkg-config --modversion gtksourceview-4
+then
+	echo OK
+else
+	echo KO
+fi
