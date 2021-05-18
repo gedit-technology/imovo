@@ -19,8 +19,11 @@ git clean -xdf
 git r
 git checkout master
 
-#mkdir -p "${install_prefix}"
-#./configure --prefix="${install_prefix}" --enable-introspection=yes || exit 1
+mkdir build
+pushd build/
+
+meson --prefix "${install_prefix}" || exit 1
+
 #make || exit 1
 #make check || exit 1 # before install
 #make install || exit 1
