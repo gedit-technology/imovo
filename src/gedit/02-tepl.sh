@@ -22,7 +22,7 @@ git checkout master
 mkdir build
 pushd build/
 
-meson --prefix "${install_prefix}" || exit 1
+PKG_CONFIG_PATH="${install_prefix}/lib64/pkgconfig" meson --prefix "${install_prefix}" || exit 1
 
 #make || exit 1
 #make check || exit 1 # before install
