@@ -32,14 +32,14 @@ export XDG_DATA_DIRS="${install_prefix}/share:${XDG_DATA_DIRS}"
 meson --prefix "${install_prefix}" || exit 1
 ninja || exit 1
 ninja test || exit 1 # before install
-#ninja install || exit 1
-#ninja test || exit 1 # after install
-#
-#popd
-#popd
-#if pkg-config --modversion tepl-6
-#then
-#	echo OK
-#else
-#	echo KO
-#fi
+ninja install || exit 1
+ninja test || exit 1 # after install
+
+popd
+popd
+if pkg-config --modversion gedit
+then
+	echo OK
+else
+	echo KO
+fi
