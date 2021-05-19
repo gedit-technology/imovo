@@ -30,7 +30,7 @@ export PKG_CONFIG_PATH="${install_prefix}/lib64/pkgconfig"
 #export XDG_DATA_DIRS="${install_prefix}/share:${XDG_DATA_DIRS}"
 
 meson --prefix "${install_prefix}" || exit 1
-#ninja || exit 1
+ninja || exit 1
 #ninja test || exit 1 # before install
 #ninja install || exit 1
 #ninja test || exit 1 # after install
