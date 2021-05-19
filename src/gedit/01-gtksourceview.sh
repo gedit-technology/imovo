@@ -24,7 +24,7 @@ tar xf "${tarball_filename}"
 pushd "gtksourceview-4.0.40/"
 
 mkdir -p "${install_prefix}"
-./configure --prefix="${install_prefix}" --enable-introspection=yes || exit 1
+./configure --prefix="${install_prefix}" --enable-introspection=yes --enable-vala=yes || exit 1
 make || exit 1
 make check || exit 1 # before install
 make install || exit 1
