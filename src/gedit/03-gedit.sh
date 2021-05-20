@@ -5,7 +5,7 @@ install_prefix=~/.imovo/gedit
 
 git_repo_remote_url='https://gitlab.gnome.org/GNOME/gedit.git'
 git_repo_path="${git_repos_cache_dir}/gedit"
-git_repo_commit='4e971d68e320094258f63b6a907de4b48b46f33d'
+git_repo_commit='89c016881609fc892f4e0d916988c44aa0f1fbce'
 
 if test ! -d "${git_repo_path}"
 then
