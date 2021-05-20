@@ -18,6 +18,7 @@ fi
 pushd "${git_repo_path}"
 git clean -xdf
 git r
+git checkout master
 git branch -D imovo
 git checkout -b imovo "${git_repo_commit}"
 
