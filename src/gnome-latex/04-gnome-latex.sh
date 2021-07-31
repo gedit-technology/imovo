@@ -22,5 +22,6 @@ git checkout master
 export PKG_CONFIG_PATH="${install_prefix}/lib64/pkgconfig"
 
 ./autogen.sh --prefix="${install_prefix}" --enable-introspection --enable-vala --disable-dconf-migration || exit 1
+make || exit 1
 
 popd
