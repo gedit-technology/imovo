@@ -1,10 +1,10 @@
 #!/bin/sh
 
 git_repos_cache_dir=~/.cache/imovo/git-repos
-install_prefix=~/.imovo/gedit
+install_prefix=~/.imovo/gnome-latex
 
-git_repo_remote_url='https://github.com/gedit-org/tepl.git'
-git_repo_path="${git_repos_cache_dir}/tepl"
+git_repo_remote_url='https://gitlab.gnome.org/Archive/amtk.git'
+git_repo_path="${git_repos_cache_dir}/amtk"
 
 if test ! -d "${git_repo_path}"
 then
@@ -35,7 +35,7 @@ ninja test || exit 1 # after install
 
 popd
 popd
-if pkg-config --modversion tepl-6
+if pkg-config --modversion amtk-5
 then
 	echo OK
 else
