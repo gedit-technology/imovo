@@ -1,9 +1,9 @@
 #!/bin/sh
 
 git_repos_cache_dir=~/.cache/imovo/git-repos
-install_prefix=~/.imovo/gedit
+install_prefix=~/.imovo/gnome-latex
 
-git_repo_remote_url='https://github.com/gedit-org/tepl.git'
+git_repo_remote_url='https://github.com/swilmet-archives/tepl.git'
 git_repo_path="${git_repos_cache_dir}/tepl"
 
 if test ! -d "${git_repo_path}"
