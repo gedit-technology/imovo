@@ -2,11 +2,11 @@
 
 tarballs_cache_dir=~/.cache/imovo/tarballs
 build_prefix='/tmp/imovo'
-install_prefix=~/.imovo/gedit
+install_prefix=~/.imovo/gnome-latex
 rm -rf "${install_prefix}"
 
 tarball_filename='gtksourceview-4.0.40.tar.xz'
-remote_tarball_url="https://github.com/gedit-org/gtksourceview/releases/download/4.0.40/${tarball_filename}"
+remote_tarball_url="https://github.com/swilmet-archives/gtksourceview/releases/download/4.0.40/${tarball_filename}"
 tarball_path="${tarballs_cache_dir}/${tarball_filename}"
 
 if test ! -f "${tarball_path}"
