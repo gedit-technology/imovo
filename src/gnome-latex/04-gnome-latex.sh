@@ -19,4 +19,6 @@ git clean -xdf
 git r
 git checkout master
 
+./autogen.sh --prefix="${install_prefix}" --enable-introspection --enable-vala || exit 1
+
 popd
