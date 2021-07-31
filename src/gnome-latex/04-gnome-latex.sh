@@ -28,5 +28,6 @@ export XDG_DATA_DIRS="${install_prefix}/share:${XDG_DATA_DIRS}"
 make || exit 1
 make check || exit 1 # before install
 make install || exit 1
+make check || exit 1 # after install
 
 popd
