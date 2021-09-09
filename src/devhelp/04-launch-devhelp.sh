@@ -9,4 +9,4 @@ export LD_LIBRARY_PATH="${install_prefix}/lib64"
 # things):
 export XDG_DATA_DIRS="${install_prefix}/share:${XDG_DATA_DIRS}"
 
-"${install_prefix}"/bin/devhelp
+"${install_prefix}"/bin/devhelp "$@"
