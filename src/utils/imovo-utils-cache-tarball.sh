@@ -3,12 +3,12 @@
 filename="$1"
 url="$2"
 
-tarballs_location=~/.imovo/_tarballs
+source ./imovo-utils-global-imovo-config.sh
 
-tarball_path="${tarballs_location}/${filename}"
+tarball_path="${imovo_config_tarballs_location}/${filename}"
 
 if test ! -f "${tarball_path}"
 then
-	mkdir -p "${tarballs_location}"
+	mkdir -p "${imovo_config_tarballs_location}"
 	curl --output "${tarball_path}" --location "${url}"
 fi
