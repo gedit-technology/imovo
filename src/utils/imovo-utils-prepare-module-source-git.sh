@@ -3,15 +3,14 @@
 git_repo_name="$1"
 git_ref="$2"
 
-git_repos_location=~/comp/gedit-org
-imovo_tmp_prefix=~/.imovo/_tmp
+source ./imovo-utils-global-imovo-config.sh
 
-rm -rf "${imovo_tmp_prefix}"
-mkdir -p "${imovo_tmp_prefix}"
+rm -rf "${imovo_config_tmp_dir}"
+mkdir -p "${imovo_config_tmp_dir}"
 
-cp -r "${git_repos_location}/${git_repo_name}" "${imovo_tmp_prefix}/"
+cp -r "${imovo_config_git_repos_location}/${git_repo_name}" "${imovo_config_tmp_dir}/"
 
-pushd "${imovo_tmp_prefix}/${git_repo_name}/"
+pushd "${imovo_config_tmp_dir}/${git_repo_name}/"
 git clean -xdf
 git reset --hard HEAD
 git checkout -b imovo "${git_ref}"
