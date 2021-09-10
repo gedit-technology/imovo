@@ -1,5 +1,5 @@
 #!/bin/sh
 
-pushd ../modules/
+pushd ../../modules/
 ./amtk.sh 'gnome-latex'
 popd

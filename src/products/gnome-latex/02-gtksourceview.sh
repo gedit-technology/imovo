@@ -1,5 +1,5 @@
 #!/bin/sh
 
-pushd ../modules/
+pushd ../../modules/
 ./gtksourceview.sh 'gnome-latex'
 popd
