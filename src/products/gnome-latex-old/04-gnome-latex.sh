@@ -1,33 +1,8 @@
 #!/bin/sh
 
-git_repos_cache_dir=~/.cache/imovo/git-repos
 install_prefix=~/.imovo/gnome-latex
-
-git_repo_remote_url='https://gitlab.gnome.org/Archive/gnome-latex.git'
-git_repo_path="${git_repos_cache_dir}/gnome-latex"
-
-if test ! -d "${git_repo_path}"
-then
-	mkdir -p "${git_repos_cache_dir}"
-	pushd "${git_repos_cache_dir}"
-	git clone "${git_repo_remote_url}" || exit 1
-	popd
-fi
-
-pushd "${git_repo_path}"
-git clean -xdf
-git r
-git checkout master
 
 export PKG_CONFIG_PATH="${install_prefix}/lib64/pkgconfig"
 
 # At least for g-ir-scanner.
 export XDG_DATA_DIRS="${install_prefix}/share:${XDG_DATA_DIRS}"
-
-./autogen.sh --prefix="${install_prefix}" --enable-introspection --enable-vala --disable-dconf-migration || exit 1
-make || exit 1
-make check || exit 1 # before install
-make install || exit 1
-make check || exit 1 # after install
-
-popd
