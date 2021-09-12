@@ -15,6 +15,6 @@ tarball_path="${imovo_config_tarballs_location}/${filename}"
 
 if test ! -f "${tarball_path}"
 then
-	mkdir -p "${imovo_config_tarballs_location}"
-	curl --output "${tarball_path}" --location "${url}"
+	mkdir -p "${imovo_config_tarballs_location}" || exit 1
+	curl --output "${tarball_path}" --location "${url}" || exit 1
 fi
