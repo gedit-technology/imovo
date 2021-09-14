@@ -4,4 +4,4 @@ pushd ../../utils/
 source ./imovo-utils-setup-env.sh 'devhelp'
 popd
 
-"${install_prefix}"/bin/devhelp "$@"
+${imovo_config_prefix}/devhelp/bin/devhelp "$@"
