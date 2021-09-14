@@ -15,3 +15,10 @@ popd
 pushd ../utils/
 ./imovo-utils-prepare-product.sh "${product_name}" || exit 1
 popd
+
+pushd "${product_directory}"
+for dep in `cat list-deps`
+do
+	echo "${dep}"
+done
+popd
