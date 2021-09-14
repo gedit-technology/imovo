@@ -21,7 +21,7 @@ pushd "${product_directory}"
 for dep in `cat list-deps`
 do
 	pushd ../../modules/
-	./${dep}.sh "${product_name}"
+	./${dep}.sh "${product_name}" || exit 1
 	popd
 done
 popd
