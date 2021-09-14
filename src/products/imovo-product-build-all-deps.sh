@@ -25,3 +25,7 @@ do
 	popd
 done
 popd
+
+pushd "${imovo_config_prefix}"
+cp -r "${product_name}/" "_deps_${product_name}"
+popd
