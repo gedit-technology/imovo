@@ -26,8 +26,6 @@ fi
 
 # TODO: handle git submodules.
 
-#cp -r "${imovo_config_git_repos_orig_location}/${git_repo_name}" "${imovo_config_tmp_dir}/" || exit 1
-
 #pushd "${imovo_config_tmp_dir}/${git_repo_name}/"
 #git clean -xdf || exit 1
 #git reset --hard HEAD || exit 1
