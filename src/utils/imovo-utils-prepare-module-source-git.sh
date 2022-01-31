@@ -13,7 +13,7 @@ source ./imovo-utils-global-imovo-config.sh
 
 ./imovo-utils-prepare-tmp-dir.sh
 
-cp -r "${imovo_config_git_repos_location}/${git_repo_name}" "${imovo_config_tmp_dir}/" || exit 1
+cp -r "${imovo_config_git_repos_orig_location}/${git_repo_name}" "${imovo_config_tmp_dir}/" || exit 1
 
 pushd "${imovo_config_tmp_dir}/${git_repo_name}/"
 git clean -xdf || exit 1
