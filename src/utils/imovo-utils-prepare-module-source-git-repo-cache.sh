@@ -33,6 +33,10 @@ git checkout master || exit 1
 git pull || exit 1
 
 # Capitalized "Imovo", because I never use branch names with capital letters.
-git branch -D Imovo || exit 1
-git checkout -b Imovo "${git_ref}" || exit 1
+# Note the -B (not -b) option, to avoid error messages, in fact
+# `git branch -D Imovo` also gives an error message if the Imovo branch doesn't
+# exist.
+git checkout -B Imovo || exit 1
+
+git reset --hard "${git_ref}" || exit 1
 popd
