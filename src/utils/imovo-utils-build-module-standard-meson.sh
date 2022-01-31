@@ -16,7 +16,10 @@ install_prefix="${imovo_config_prefix}/${product}"
 ./imovo-utils-prepare-module-source-git.sh "${module}" "${module_git_ref}" || exit 1
 
 pushd "${imovo_config_tmp_dir}/${module}/" || exit 1
+
+# -p to avoid error message "File exists" in case the build/ dir already exists.
 mkdir -p build || exit 1
+
 pushd build/ || exit 1
 meson --prefix "${install_prefix}" || exit 1
 ninja || exit 1
