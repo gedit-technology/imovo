@@ -26,8 +26,13 @@ fi
 
 # TODO: handle git submodules.
 
-#pushd "${imovo_config_tmp_dir}/${git_repo_name}/"
-#git clean -xdf || exit 1
-#git reset --hard HEAD || exit 1
-#git checkout -b imovo "${git_ref}" || exit 1
-#popd
+pushd "${git_repo_cache_dir}" || exit 1
+git clean -xdf || exit 1
+git reset --hard HEAD || exit 1
+git checkout master || exit 1
+git pull || exit 1
+
+# Capitalized "Imovo", because I never use branch names with capital letters.
+git branch -D Imovo || exit 1
+git checkout -b Imovo "${git_ref}" || exit 1
+popd
