@@ -11,8 +11,7 @@ git_ref="$2"
 
 source ./imovo-utils-global-imovo-config.sh
 
-rm -rf "${imovo_config_tmp_dir}" || exit 1
-mkdir -p "${imovo_config_tmp_dir}" || exit 1
+./imovo-utils-prepare-tmp-dir.sh
 
 cp -r "${imovo_config_git_repos_location}/${git_repo_name}" "${imovo_config_tmp_dir}/" || exit 1
 
