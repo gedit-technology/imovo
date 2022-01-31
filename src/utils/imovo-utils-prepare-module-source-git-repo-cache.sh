@@ -18,8 +18,10 @@ git_repo_cache_dir="${imovo_config_git_repos_cache_location}/${git_repo_name}"
 if test ! -d "${git_repo_cache_dir}"
 then
 	rm -rf "${git_repo_cache_dir}" || exit 1
-	# here: git clone
-	echo 'need to do git clone'
+
+	pushd "${imovo_config_git_repos_cache_location}" || exit 1
+	git clone "${git_repo_orig_dir}" || exit 1
+	popd
 fi
 
 # TODO: handle git submodules.
