@@ -6,3 +6,5 @@ Imovo :: possible tasks
 
 - In `products/`, create an `integration` product to build all libs and apps in
   the same prefix.
+
+- Add `autoconf-archive` module.
