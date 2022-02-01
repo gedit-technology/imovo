@@ -11,6 +11,9 @@ product="$1"
 source ../utils/imovo-utils-global-imovo-config.sh
 install_prefix="${imovo_config_prefix}/${product}"
 
+# Install from a tarball, it's easier because there is the `./configure` script,
+# while in the git repo it's missing (like all standard Autotools projects).
+
 tarball_filename='autoconf-archive-2021.02.19.tar.xz'
 
 pushd ../utils/
