@@ -16,3 +16,6 @@ git submodule update --init
 
 ==> Will read the manpages, instead of trying lots of commands.
 ```
+
+Worst case, I can re-add and re-use the old and dumb utils script for git, which
+does a full copy each time instead of doing git pull.
