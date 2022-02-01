@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+# Meant to be called with 'source':
+# source ./imovo-utils-setup-env.sh <product_name>
 
 if test $# -ne 1
 then
