@@ -10,8 +10,7 @@ tarball_filename="$1"
 
 source ./imovo-utils-global-imovo-config.sh
 
-rm -rf "${imovo_config_tmp_dir}" || exit 1
-mkdir -p "${imovo_config_tmp_dir}" || exit 1
+./imovo-utils-prepare-tmp-dir.sh || exit 1
 
 cp "${imovo_config_tarballs_location}/${tarball_filename}" "${imovo_config_tmp_dir}/" || exit 1
 
