@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TODO: need to get rid of this script, use the other/smarter one.
+
 if test $# -ne 2
 then
 	echo "$0: wrong number of arguments." 1>&2
