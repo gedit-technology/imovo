@@ -8,3 +8,5 @@ Imovo :: possible tasks
   the same prefix.
 
 - Add `autoconf-archive` module.
+
+- Have an easier / less hacky / more generic way to launch installed programs.
