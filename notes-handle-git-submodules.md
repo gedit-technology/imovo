@@ -1,6 +1,9 @@
 notes-handle-git-submodules
 ===========================
 
+Some quick trials
+-----------------
+
 ```
 git pull
 # The .gitmodules text file has correctly been updated.
@@ -17,5 +20,16 @@ git submodule update --init
 ==> Will read the manpages, instead of trying lots of commands.
 ```
 
+Possibility to use old/dumb script
+----------------------------------
+
 Worst case, I can re-add and re-use the old and dumb utils script for git, which
 does a full copy each time instead of doing git pull.
+
+After reading the gitsubmodules(7) manpage
+------------------------------------------
+
+- There are high-level options to some git commands, to recurse into submodules.
+
+- Maybe need to update/improve my readme files in some git repos for submodules
+  handling.
