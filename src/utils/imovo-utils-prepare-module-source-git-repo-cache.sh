@@ -40,6 +40,8 @@ git reset --hard "${git_ref}" || exit 1
 
 git submodule deinit --force --all || exit 1
 git submodule init || exit 1
-# TODO: git submodule: still need to have the work trees.
+
+# --recursive could be added, but not tested, I don't currently need it.
+git submodule update || exit 1
 
 popd
