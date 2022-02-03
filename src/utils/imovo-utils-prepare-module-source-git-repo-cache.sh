@@ -38,6 +38,8 @@ git checkout -B Imovo || exit 1
 
 git reset --hard "${git_ref}" || exit 1
 
-# TODO: handle git submodules.
+git submodule deinit --force --all || exit 1
+git submodule init || exit 1
+# TODO: git submodule: still need to have the work trees.
 
 popd
