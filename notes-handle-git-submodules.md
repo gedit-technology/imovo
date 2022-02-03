@@ -30,6 +30,10 @@ After reading the gitsubmodules(7) manpage
 ------------------------------------------
 
 - There are high-level options to some git commands, to recurse into submodules.
+  Update: BUT, the operations need to be done at the specific `git_ref`, so it's
+  probably a better idea to setup and cleanup the submodules with some
+  `git submodule` commands.
+  ==> Will read the git-submodule(1) manpage.
 
 - Maybe need to update/improve my readme files in some git repos for submodules
   handling.

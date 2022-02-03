@@ -24,8 +24,6 @@ then
 	popd
 fi
 
-# TODO: handle git submodules.
-
 pushd "${git_repo_cache_dir}" || exit 1
 git clean -xdf || exit 1
 git reset --hard HEAD || exit 1
@@ -39,4 +37,7 @@ git pull || exit 1
 git checkout -B Imovo || exit 1
 
 git reset --hard "${git_ref}" || exit 1
+
+# TODO: handle git submodules.
+
 popd
