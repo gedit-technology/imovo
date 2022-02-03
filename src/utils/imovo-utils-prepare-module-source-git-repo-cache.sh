@@ -40,10 +40,17 @@ git reset --hard "${git_ref}" || exit 1
 
 # Submodules handling. It's done here, because it needs to be done at git_ref.
 # Optimizations are perhaps possible. But it does the job.
+# Note: doesn't work with "active = false" in the .gitmodules file, don't know
+# why, but I don't currently need it.
+
 git submodule deinit --force --all || exit 1
+# Now, if the submodules were previously initialized and checked out, the
+# .git/modules/ are still there.
+
 git submodule init || exit 1
 
-# --recursive could be added, but not tested, I don't currently need it.
+# --recursive could be added for nested git submodules, but not tested, I don't
+# currently need it.
 git submodule update || exit 1
 
 popd
