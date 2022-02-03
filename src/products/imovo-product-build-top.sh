@@ -8,9 +8,7 @@ fi
 
 product_directory="$1"
 
-pushd "${product_directory}" || exit 1
-product_name="`cat product-name`"
-popd
+product_name="${product_directory%/}"
 
 pushd ../utils/
 source ./imovo-utils-setup-env.sh "${product_name}"
