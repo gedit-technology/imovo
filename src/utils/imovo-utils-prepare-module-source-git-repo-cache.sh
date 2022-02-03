@@ -11,6 +11,9 @@ git_repo_name="$1"
 # WARNING: if specifying a branch, add 'origin': 'origin/branch_name'
 git_ref="$2"
 
+# A previous implementation did just a cp -r of the whole repo each time.
+# Easier but far less efficient for big repos.
+
 source ./imovo-utils-global-imovo-config.sh
 
 mkdir -p "${imovo_config_git_repos_cache_location}" || exit 1
