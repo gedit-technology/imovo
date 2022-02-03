@@ -8,6 +8,8 @@ fi
 
 product="$1"
 module="$2"
+
+# See the WARNING in imovo-utils-prepare-module-source-git-repo-cache.sh.
 module_git_ref="$3"
 
 source ./imovo-utils-global-imovo-config.sh
