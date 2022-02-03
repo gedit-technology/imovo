@@ -38,6 +38,8 @@ git checkout -B Imovo || exit 1
 
 git reset --hard "${git_ref}" || exit 1
 
+# Submodules handling. It's done here, because it needs to be done at git_ref.
+# Optimizations are perhaps possible. But it does the job.
 git submodule deinit --force --all || exit 1
 git submodule init || exit 1
 
