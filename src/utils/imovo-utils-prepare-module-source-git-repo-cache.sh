@@ -7,6 +7,8 @@ then
 fi
 
 git_repo_name="$1"
+
+# WARNING: if specifying a branch, add 'origin': 'origin/branch_name'
 git_ref="$2"
 
 source ./imovo-utils-global-imovo-config.sh
@@ -36,6 +38,11 @@ git pull || exit 1
 # exist.
 git checkout -B Imovo || exit 1
 
+# See the WARNING above about taking the git_ref parameter. If 'origin' is not
+# specified, and if the branch already exists locally, it'll move to the old,
+# not up-to-date branch.
+# Could be improved, doing some cleanup beforehand etc (removing all local
+# branches).
 git reset --hard "${git_ref}" || exit 1
 
 # Submodules handling. It's done here, because it needs to be done at git_ref.
