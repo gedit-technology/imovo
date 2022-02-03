@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 if test $# -ne 1
 then
@@ -8,16 +8,14 @@ fi
 
 product_directory="$1"
 
-pushd "${product_directory}" || exit 1
-product_name="`cat product-name`"
-popd
+product_name="${product_directory%/}"
 
 pushd ../utils/
 ./imovo-utils-prepare-product.sh "${product_name}" || exit 1
 source ./imovo-utils-setup-env.sh "${product_name}"
 popd
 
-pushd "${product_directory}"
+pushd "${product_directory}" || exit 1
 for dep in `cat list-deps`
 do
 	pushd ../../modules/
@@ -26,6 +24,6 @@ do
 done
 popd
 
-pushd "${imovo_config_prefix}"
+pushd "${imovo_config_prefix}" || exit 1
 cp -r "${product_name}/" "_deps_${product_name}"
 popd
