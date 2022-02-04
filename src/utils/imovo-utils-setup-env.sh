@@ -18,6 +18,7 @@ export PKG_CONFIG_PATH="${_install_prefix}/lib64/pkgconfig"
 export XDG_DATA_DIRS="${_install_prefix}/share:${XDG_DATA_DIRS}"
 export LD_LIBRARY_PATH="${_install_prefix}/lib64"
 export PATH="${_install_prefix}/bin:${PATH}"
+export ACLOCAL_PATH="${_install_prefix}/share/aclocal/"
 export PS1="[${_product}] ${PS1}"
 
 alias meson_imovo='meson --prefix "${_install_prefix}"'
