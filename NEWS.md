@@ -11,13 +11,18 @@ News in v2022.1, 2022-02-xx (not yet released)
    repos). With git submodules handling too.
    The old/dumb script just did a full copy each time, now it's a local git
    clone/pull (basically).
+* Modules: some improvements here and there; adapt for utils changes.
+* Products:
+ - Some improvements here and there.
+ - Remove the product-name files, take the info from the directory name.
+* More documentation.
 
 * Modules additions:
  - autoconf-archive
  - gedit-plugins
 
-* Modules: some improvements here and there; adapt for utils changes.
-* Documentation improvements.
+* Products additions:
+ - gedit-plugins
 
 News in v2021, 2021-11-19
 -------------------------
