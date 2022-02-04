@@ -24,7 +24,7 @@ popd
 pushd "${imovo_config_tmp_dir}/gtksourceview-4.0.40/" || exit 1
 ./configure --prefix="${install_prefix}" --enable-introspection=yes --enable-vala=yes || exit 1
 make || exit 1
-make check || exit 1 # before install
+# make check || exit 1 # before install
 make install || exit 1
 make check || exit 1 # after install
 popd
