@@ -1,28 +1,31 @@
 Imovo news
 ==========
 
-News in v2022.1, 2022-02-xx (not yet released)
+News in v2022.1, 2022-02-07
 ---------------------------
 
 * Utils:
  - Doing a new pass at improving the shell scripts.
- - Especially the one to prepare the build of a module from a git repo (smarter
-   way, to make it faster for the following builds, especially for big git
-   repos). With git submodules handling too.
+ - Especially the script to prepare the build of a module from a git repo
+   (smarter way, to make it faster for the following builds, especially for big
+   git repos). With git submodules handling too.
    The old/dumb script just did a full copy each time, now it's a local git
    clone/pull (basically).
+ - setup-env: setup ACLOCAL_PATH (for Autotools projects).
 * Modules: some improvements here and there; adapt for utils changes.
 * Products:
  - Some improvements here and there.
  - Remove the product-name files, take the info from the directory name.
+ - build-all-deps: fix a bug.
 * More documentation.
 
 * Modules additions:
  - autoconf-archive
  - gedit-plugins
 
-* Products additions:
- - gedit-plugins
+* Products changes:
+ - gedit -> gedit-plugins, to have everything.
+ - Add tepl.
 
 News in v2021, 2021-11-19
 -------------------------
