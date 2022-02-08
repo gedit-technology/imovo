@@ -22,3 +22,4 @@ export ACLOCAL_PATH="${_install_prefix}/share/aclocal/"
 export PS1="[${_product}] ${PS1}"
 
 alias meson_imovo='meson --prefix "${_install_prefix}"'
+alias autogen_gtksourceview='./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-vala=yes --enable-code-coverage --enable-gtk-doc'
