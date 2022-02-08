@@ -14,7 +14,9 @@ _product="$1"
 source ./imovo-utils-global-imovo-config.sh
 _install_prefix="${imovo_config_prefix}/${_product}"
 
-export PKG_CONFIG_PATH="${_install_prefix}/lib64/pkgconfig"
+# share/pkgconfig is needed for gtk-doc.
+export PKG_CONFIG_PATH="${_install_prefix}/lib64/pkgconfig:${_install_prefix}/share/pkgconfig"
+
 export XDG_DATA_DIRS="${_install_prefix}/share:${XDG_DATA_DIRS}"
 export LD_LIBRARY_PATH="${_install_prefix}/lib64"
 export PATH="${_install_prefix}/bin:${PATH}"
