@@ -19,8 +19,12 @@ git clean -Xdf || exit 1
 
 make -j`nproc` || exit 1
 make -j`nproc` distcheck || exit 1
-mv "gtksourceview-${version}.tar.xz" "${imovo_config_new_tarballs_location}" || exit 1
+
+mkdir -p "${imovo_config_new_tarballs_location}" || exit 1
+mv "gtksourceview-${version}.tar.xz" "${imovo_config_new_tarballs_location}/" || exit 1
+
 git reset --hard HEAD || exit 1
+git clean -Xdf || exit 1
 popd
 
 echo
