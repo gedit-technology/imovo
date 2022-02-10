@@ -14,17 +14,16 @@ install_prefix="${imovo_config_prefix}/${product}"
 # FIXME: the URL must be updated, or just remove the code for downloading the tarball.
 #tarball_url='https://github.com/gedit-org/gtksourceview/releases/download/4.0.40/gtksourceview-4.0.40.tar.xz'
 
-tarball_filename='gtksourceview-4.0.40.tar.xz'
+tarball_filename='gtksourceview-4.0.41.tar.xz'
 
 pushd ../utils/
 #./imovo-utils-download-tarball-if-needed.sh "${tarball_filename}" "${tarball_url}" || exit 1
 ./imovo-utils-prepare-module-source-tarball.sh "${tarball_filename}" || exit 1
 popd
 
-pushd "${imovo_config_tmp_dir}/gtksourceview-4.0.40/" || exit 1
+pushd "${imovo_config_tmp_dir}/gtksourceview-4.0.41/" || exit 1
 ./configure --prefix="${install_prefix}" --enable-introspection=yes --enable-vala=yes || exit 1
-make || exit 1
-# make check || exit 1 # before install
+make -j`nproc` || exit 1
 make install || exit 1
-make check || exit 1 # after install
+make -j`nproc` check || exit 1
 popd
