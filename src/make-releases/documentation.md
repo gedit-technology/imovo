@@ -6,7 +6,8 @@ Not everything is automated yet.
 Steps
 -----
 
-- Do the release commit in the product's repo.
+- Do the release commit in the product's repo, writing a summary of changes in
+  the NEWS file, adapting the version number if appropriate, etc.
 
 - Call `imovo-product-build-all-deps.sh`,
   or manually replace `~/.imovo/<product>/` by `~/.imovo/_deps_<product>/`.
