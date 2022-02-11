@@ -11,6 +11,8 @@ Steps
 - Call `imovo-product-build-all-deps.sh`,
   or manually replace `~/.imovo/<product>/` by `~/.imovo/_deps_<product>/`.
 
+- Call `imovo-utils-setup-env.sh` to enter the environment for the product.
+
 - Call the `make-release-<product>.sh` script.
   The script tells where the tarball is saved, if successful.
 
