@@ -25,4 +25,5 @@ export PS1="[${_product}] ${PS1}"
 
 alias meson_imovo='meson --prefix "${_install_prefix}"'
 alias autogen_gtksourceview='./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-vala=yes --enable-code-coverage --enable-gtk-doc --enable-glade-catalog'
+alias autogen_gnome_latex='./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-vala=yes --enable-code-coverage --enable-gtk-doc'
 alias make_no_deprecations="make -j`nproc` CFLAGS='-Wno-deprecated-declarations'"
