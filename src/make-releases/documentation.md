@@ -7,7 +7,8 @@ Steps
 -----
 
 - Do the release commit in the product's repo, writing a summary of changes in
-  the NEWS file, adapting the version number if appropriate, etc.
+  the NEWS file, adapting the version number if appropriate, adding the
+  `<release>` element in the AppData if it's an application, etc.
 
 - Call `imovo-product-build-all-deps.sh`,
   or manually replace `~/.imovo/<product>/` by `~/.imovo/_deps_<product>/`.
