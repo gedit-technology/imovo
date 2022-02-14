@@ -17,8 +17,7 @@ popd
 
 pushd "${imovo_config_git_repos_cache_location}/gnome-latex/" || exit 1
 ./autogen.sh --prefix="${install_prefix}" --enable-introspection=yes --enable-vala=yes --enable-code-coverage --enable-gtk-doc || exit 1
-make || exit 1
-# make check || exit 1 # before install
+make -j`nproc` || exit 1
 make install || exit 1
-make check || exit 1 # after install
+make -j`nproc` check || exit 1
 popd
