@@ -1,6 +1,17 @@
 Imovo news
 ==========
 
+News in v2022.2, 2022-04-15
+---------------------------
+
+* Improvements to imovo-utils-setup-env.sh.
+* Add launch.sh for gedit-plugins product.
+* Add the first make-releases scripts.
+* Add gspell module and product.
+* Add tepl-untitled-document module, to build a specific branch of Tepl for
+  gedit purposes.
+* Other small changes/improvements here and there.
+
 News in v2022.1, 2022-02-07
 ---------------------------
 
