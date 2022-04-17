@@ -4,14 +4,17 @@
 # install directory.
 # We suppose that this module is executed first.
 # If there are books duplicates from a following built module, the module built
-# with Imovo will anyway override the previously copied system book.
+# with Imovo will anyway override the previously copied system book. It's not a
+# big problem if there are leftover files from the system book that aren't used
+# by the newly installed book.
 
-# It's useful because the gtk-doc fixxref tool will put "../" relative links for
-# symbols part of another book. Instead of hard-coding a link to
-# "/usr/share/gtk-doc/html/...".
-# When releasing an Autotools tarball, the relative links are especially useful,
-# if Linux distros don't rebuild themselves the gtk-doc books and take the ones
-# directly from the tarballs.
+# It's useful because the gtk-doc fixxref tool will - as much as possible - not
+# hard-code links to "/usr/share/gtk-doc/html/..." (for symbols part of another
+# book), and put either "../" relative links, or - when running
+# `make distcheck` - put "https://developer.gnome.org/" links which are
+# specially handled by Devhelp (but are unfortunately no longer available
+# online). So for Autotools tarballs, it's useful if Linux distros don't rebuild
+# themselves the gtk-doc books and take the ones directly from the tarballs.
 
 if test $# -ne 1
 then
