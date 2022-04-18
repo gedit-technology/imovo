@@ -32,7 +32,7 @@ fi
 pushd "${git_repo_cache_dir}" || exit 1
 git clean -xdf || exit 1
 git reset --hard HEAD || exit 1
-git checkout master || exit 1
+git checkout main || git checkout master || exit 1
 git pull || exit 1
 
 # Capitalized "Imovo", because I never use branch names with capital letters.
