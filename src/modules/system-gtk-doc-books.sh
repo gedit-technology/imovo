@@ -13,8 +13,9 @@
 # book), and put either "../" relative links, or - when running
 # `make distcheck` - put "https://developer.gnome.org/" links which are
 # specially handled by Devhelp (but are unfortunately no longer available
-# online). So for Autotools tarballs, it's useful if Linux distros don't rebuild
-# themselves the gtk-doc books and take the ones directly from the tarballs.
+# online). So for Autotools tarballs, it's useful for the Linux distros that
+# don't rebuild themselves the gtk-doc books and take the ones directly from the
+# tarballs.
 
 if test $# -ne 1
 then
