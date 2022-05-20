@@ -13,8 +13,7 @@ source ../utils/imovo-utils-global-imovo-config.sh
 pushd "${imovo_config_git_repos_orig_location}/gtksourceview" || exit 1
 git clean -Xdf || exit 1
 
-# My old script had also: --disable-Werror
-./autogen.sh --enable-introspection=yes --enable-vala=yes --enable-gtk-doc || exit 1
+./autogen.sh --enable-introspection=yes --enable-gtk-doc || exit 1
 
 make -j`nproc` || exit 1
 make -j`nproc` distcheck || exit 1
