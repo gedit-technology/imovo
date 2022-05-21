@@ -15,8 +15,7 @@ Steps
 
 - Call `imovo-utils-setup-env.sh` to enter the environment for the product.
 
-- Call the `make-release-<product>.sh` script.
-  The script tells where the tarball is saved, if successful.
+- Run the usual commands to roll the tarball (`ninja dist` or `make distcheck`).
 
 - Possibly copy the tarball inside `~/.imovo/_tarballs/`
 
