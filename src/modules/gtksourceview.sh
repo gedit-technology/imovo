@@ -11,13 +11,9 @@ product="$1"
 source ../utils/imovo-utils-global-imovo-config.sh
 install_prefix="${imovo_config_prefix}/${product}"
 
-# FIXME: the URL must be updated, or just remove the code for downloading the tarball.
-#tarball_url='https://github.com/gedit-org/gtksourceview/releases/download/4.0.40/gtksourceview-4.0.40.tar.xz'
-
 tarball_filename='gtksourceview-4.0.41.tar.xz'
 
 pushd ../utils/
-#./imovo-utils-download-tarball-if-needed.sh "${tarball_filename}" "${tarball_url}" || exit 1
 ./imovo-utils-prepare-module-source-tarball.sh "${tarball_filename}" || exit 1
 popd
 
