@@ -10,7 +10,7 @@ Steps
   the NEWS file, adapting the version number if appropriate, adding the
   `<release>` element in the AppData if it's an application, etc.
 
-- Call `imovo-product-build-all-deps.sh`,
+- Call `imovo-product-build-deps.sh`,
   or manually replace `~/.imovo/<product>/` by `~/.imovo/_deps_<product>/`.
 
 - Call `imovo-utils-setup-env.sh` to enter the environment for the product.
