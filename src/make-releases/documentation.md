@@ -23,6 +23,9 @@ Steps
   - Push the commit;
   - Add the tag and push it;
   - Possibly do a post-release version bump.
+  - If the release was done on a branch (for a stable version), it's better to
+    copy the added content to the NEWS file into the one from the main/master
+    branch. Although it's not the most important, and can be skipped.
 
 - Possibly upload the tarball, or at least do a backup.
 
