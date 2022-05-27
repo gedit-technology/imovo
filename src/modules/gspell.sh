@@ -16,7 +16,7 @@ pushd ../utils/
 popd
 
 pushd "${imovo_config_git_repos_cache_location}/gspell/" || exit 1
-./autogen.sh --prefix="${install_prefix}" --enable-gtk-doc || exit 1
+./autogen.sh --prefix="${install_prefix}" --enable-introspection=yes --enable-vala=yes --enable-gtk-doc || exit 1
 make -j`nproc` || exit 1
 make install || exit 1
 make -j`nproc` check || exit 1
