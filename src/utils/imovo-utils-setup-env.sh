@@ -26,7 +26,14 @@ export ACLOCAL_PATH="${_install_prefix}/share/aclocal/"
 export IMOVO_UNDER_PRODUCT="${_product}"
 export PS1="[${_product}] ${PS1}"
 
-alias meson_imovo='meson --prefix "${_install_prefix}"'
+# "aliases" but implemented as functions and then exporting those functions so
+# that they are available in subshells. (an alias is not exported and cannot be
+# so).
+meson_imovo() {
+	meson --prefix "${_install_prefix}"
+}
+export -f meson_imovo
+
 alias meson_gnome_gedit='meson_imovo -D gtk_doc=true -D require_all_tests=true'
 alias autogen_gnome_latex='./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-code-coverage --enable-gtk-doc'
 alias autogen_gspell='./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-vala=yes --enable-code-coverage --enable-gtk-doc --enable-installed-tests'
