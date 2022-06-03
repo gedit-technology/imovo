@@ -9,7 +9,7 @@ get_script_directory() {
 script_directory="`get_script_directory`"
 
 pushd "${script_directory}/../../utils/"
-source ./imovo-utils-setup-env.sh 'devhelp'
+source ./imovo-utils-setup-env.sh 'i'
 popd
 
 devhelp "$@"
