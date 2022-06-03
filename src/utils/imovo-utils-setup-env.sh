@@ -12,7 +12,9 @@ fi
 _product="$1"
 
 source ./imovo-utils-global-imovo-config.sh
-_install_prefix="${imovo_config_prefix}/${_product}"
+
+# export this variable, needed in subshells with imovo-shell.
+export _install_prefix="${imovo_config_prefix}/${_product}"
 
 # share/pkgconfig is needed for gtk-doc.
 export PKG_CONFIG_PATH="${_install_prefix}/lib64/pkgconfig:${_install_prefix}/share/pkgconfig"
