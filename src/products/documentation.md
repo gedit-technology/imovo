@@ -8,3 +8,5 @@ scripts to build a product.
 
 Only a *single* product can be built at a time. It's sequential. That way the
 implementation is much easier, and for my needs it's sufficient.
+
+The "i" product means "integration".
