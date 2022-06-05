@@ -9,5 +9,10 @@ fi
 product="$1"
 
 pushd ../utils/
-./imovo-utils-build-module-standard-meson.sh "${product}" 'gtksourceview' 'origin/gtksourceview-4-8' || exit 1
+./imovo-utils-build-module-meson-with-args.sh \
+	"${product}" \
+	'gtksourceview' \
+	'origin/gtksourceview-4-8' \
+	'-D gtk_doc=true' \
+	|| exit 1
 popd
