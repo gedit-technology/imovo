@@ -13,7 +13,7 @@ Steps
 - Call `imovo-product-build-deps.sh`,
   or manually replace `~/.imovo/<product>/` by `~/.imovo/_deps_<product>/`.
 
-- Call `imovo-utils-setup-env.sh` to enter the environment for the product.
+- Call `imovo-shell` to enter the environment for the product.
 
 - Run the usual commands to roll the tarball (`ninja dist` or `make distcheck`).
 
