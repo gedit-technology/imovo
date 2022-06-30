@@ -31,6 +31,9 @@ export PS1="[${_product}] ${PS1}"
 # "aliases" but implemented as functions and then exporting those functions so
 # that they are available in subshells. (an alias is not exported and cannot be
 # so).
+cmake_imovo() {
+	cmake -DCMAKE_INSTALL_PREFIX="${_install_prefix}" "$@"
+}
 meson_imovo() {
 	meson --prefix "${_install_prefix}"
 }
@@ -40,6 +43,7 @@ autogen_gnome_latex() {
 autogen_gspell() {
 	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-vala=yes --enable-code-coverage --enable-gtk-doc --enable-installed-tests
 }
+export -f cmake_imovo
 export -f meson_imovo
 export -f autogen_gnome_latex
 export -f autogen_gspell
