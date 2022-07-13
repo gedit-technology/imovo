@@ -35,7 +35,7 @@ cmake_imovo() {
 	cmake -DCMAKE_INSTALL_PREFIX="${_install_prefix}" "$@"
 }
 meson_imovo() {
-	meson --prefix "${_install_prefix}"
+	meson --prefix "${_install_prefix}" "$@"
 }
 autogen_gnome_latex() {
 	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-code-coverage --enable-gtk-doc
