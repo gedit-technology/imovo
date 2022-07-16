@@ -38,7 +38,7 @@ meson_imovo() {
 	meson --prefix "${_install_prefix}" "$@"
 }
 meson_gedit() {
-	meson --prefix "${_install_prefix}" -D user_documentation=false "$@"
+	meson --prefix "${_install_prefix}" -D require_all_tests=true -D user_documentation=false "$@"
 }
 autogen_gnome_latex() {
 	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-code-coverage --enable-gtk-doc
