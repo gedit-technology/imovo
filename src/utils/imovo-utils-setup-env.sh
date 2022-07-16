@@ -37,6 +37,9 @@ cmake_imovo() {
 meson_imovo() {
 	meson --prefix "${_install_prefix}" "$@"
 }
+meson_gedit() {
+	meson --prefix "${_install_prefix}" -D user_documentation=false "$@"
+}
 autogen_gnome_latex() {
 	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-code-coverage --enable-gtk-doc
 }
@@ -45,6 +48,7 @@ autogen_gspell() {
 }
 export -f cmake_imovo
 export -f meson_imovo
+export -f meson_gedit
 export -f autogen_gnome_latex
 export -f autogen_gspell
 
