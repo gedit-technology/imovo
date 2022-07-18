@@ -9,5 +9,5 @@ fi
 product="$1"
 
 pushd ../utils/
-./imovo-utils-build-module-standard-meson.sh "${product}" 'gedit-plugins' 'origin/swilmet/my-config' || exit 1
+./imovo-utils-build-module-standard-meson.sh "${product}" 'gedit-plugins' 'master' || exit 1
 popd
