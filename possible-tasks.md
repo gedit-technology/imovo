@@ -1,4 +1,6 @@
 Imovo :: possible tasks
 =======================
 
-- Have an easier / less hacky / more generic way to launch installed programs.
+- Have a more generic way to launch installed programs.
+
+- Better CMake support, to build the gcu module for example.
