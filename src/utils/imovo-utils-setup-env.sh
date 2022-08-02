@@ -23,6 +23,7 @@ export XDG_DATA_DIRS="${_install_prefix}/share:${XDG_DATA_DIRS}"
 export LD_LIBRARY_PATH="${_install_prefix}/lib64"
 export PATH="${_install_prefix}/bin:${PATH}"
 export ACLOCAL_PATH="${_install_prefix}/share/aclocal/"
+export GI_TYPELIB_PATH="${_install_prefix}/lib64/girepository-1.0"
 
 # For customizing the prompt.
 export IMOVO_UNDER_PRODUCT="${_product}"
