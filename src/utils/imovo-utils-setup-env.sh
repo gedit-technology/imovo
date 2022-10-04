@@ -47,11 +47,15 @@ autogen_gnome_latex() {
 autogen_gspell() {
 	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-vala=yes --enable-code-coverage --enable-gtk-doc --enable-installed-tests
 }
+autogen_tepl_gsv() {
+	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-code-coverage --enable-gtk-doc --enable-installed-tests
+}
 export -f cmake_imovo
 export -f meson_imovo
 export -f meson_gedit
 export -f autogen_gnome_latex
 export -f autogen_gspell
+export -f autogen_tepl_gsv
 
 alias meson_gnome_gedit='meson_imovo -D gtk_doc=true -D require_all_tests=true'
 alias make_no_deprecations="make -j`nproc` CFLAGS='-Wno-deprecated-declarations'"
