@@ -9,5 +9,5 @@ fi
 product="$1"
 
 pushd ../utils/
-./imovo-utils-build-module-standard-meson.sh "${product}" 'amtk' 'master' || exit 1
+./imovo-utils-build-module-standard-meson.sh "${product}" 'libgedit-amtk' 'main' || exit 1
 popd
