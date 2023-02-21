@@ -9,5 +9,5 @@ fi
 product="$1"
 
 pushd ../utils/
-./imovo-utils-build-module-standard-meson.sh "${product}" 'gtk-doc' 'master' || exit 1
+./imovo-utils-build-module-meson-with-args.sh "${product}" 'gtk-doc' 'master' '-Dtests=false' || exit 1
 popd
