@@ -57,5 +57,4 @@ export -f autogen_gnome_latex
 export -f autogen_gspell
 export -f autogen_tepl_gsv
 
-alias meson_gnome_gedit='meson_imovo -D gtk_doc=true -D require_all_tests=true'
 alias make_no_deprecations="make -j`nproc` CFLAGS='-Wno-deprecated-declarations'"
