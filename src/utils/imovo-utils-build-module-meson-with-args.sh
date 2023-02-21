@@ -25,7 +25,7 @@ pushd "${imovo_config_git_repos_cache_location}/${module}/" || exit 1
 mkdir -p build || exit 1
 
 pushd build/ || exit 1
-meson --prefix "${install_prefix}" ${meson_args} || exit 1
+meson setup --prefix "${install_prefix}" ${meson_args} || exit 1
 ninja || exit 1
 # ninja test || exit 1 # before install
 ninja install || exit 1

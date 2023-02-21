@@ -36,10 +36,10 @@ cmake_imovo() {
 	cmake -DCMAKE_INSTALL_PREFIX="${_install_prefix}" "$@"
 }
 meson_imovo() {
-	meson --prefix "${_install_prefix}" "$@"
+	meson setup --prefix "${_install_prefix}" "$@"
 }
 meson_gedit() {
-	meson --prefix "${_install_prefix}" -D require_all_tests=true -D user_documentation=false "$@"
+	meson setup --prefix "${_install_prefix}" -D require_all_tests=true -D user_documentation=false "$@"
 }
 autogen_gnome_latex() {
 	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-code-coverage --enable-gtk-doc
