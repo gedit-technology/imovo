@@ -41,6 +41,9 @@ meson_imovo() {
 meson_gedit() {
 	meson setup --prefix "${_install_prefix}" -D require_all_tests=true -D user_documentation=false "$@"
 }
+meson_gedit_plugins() {
+	meson setup --prefix "${_install_prefix}" -D user_documentation=false "$@"
+}
 autogen_gnome_latex() {
 	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-code-coverage --enable-gtk-doc
 }
@@ -53,6 +56,7 @@ autogen_tepl_gsv() {
 export -f cmake_imovo
 export -f meson_imovo
 export -f meson_gedit
+export -f meson_gedit_plugins
 export -f autogen_gnome_latex
 export -f autogen_gspell
 export -f autogen_tepl_gsv
