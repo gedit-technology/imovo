@@ -8,8 +8,10 @@ Mini-[JHBuild](https://wiki.gnome.org/Projects/Jhbuild) replacement. Imovo is
 more procedural (and thus less declarative), although it contains a few
 declarative files.
 
-Implemented mainly **for learning purposes** (setting/adapting the required
-environment variables, among other things), to have something more minimal that
-I fully understand, and that suits my needs for the modules that I develop.
-Also, having something custom can be beneficial, to quickly change some stuff,
-to adapt for our own workflow, etc.
+Initially implemented for learning purposes (setting/adapting the required
+environment variables, among other things).
+
+But I now prefer Imovo instead of JHBuild because it suits my needs for the
+modules that I develop. Since it's me who implemented it, and also because it's
+more minimal, I fully understand it. Also, having something custom can be
+beneficial, to quickly change some stuff, to adapt to our own workflow, etc.
