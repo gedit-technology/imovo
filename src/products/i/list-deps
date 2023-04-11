@@ -1,7 +1,9 @@
 gtk-doc
 gspell
 libgedit-amtk
+libgedit-gtksourceview
 tepl
 gedit
 gedit-plugins
+gt
 devhelp
