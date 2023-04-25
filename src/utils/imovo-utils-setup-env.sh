@@ -51,7 +51,7 @@ autogen_gspell() {
 	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-vala=yes --enable-code-coverage --enable-gtk-doc --enable-installed-tests
 }
 autogen_libgedit_gtksourceview() {
-	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-code-coverage --enable-gtk-doc --enable-installed-tests
+	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-code-coverage --enable-gtk-doc
 }
 make_no_deprecations() {
 	make -j`nproc` CFLAGS='-Wno-deprecated-declarations'
