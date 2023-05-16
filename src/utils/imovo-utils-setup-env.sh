@@ -33,7 +33,7 @@ export PS1="[${_product}] ${PS1}"
 # that they are available in subshells. (an alias is not exported and cannot be
 # so).
 cmake_imovo() {
-	cmake -DCMAKE_INSTALL_PREFIX="${_install_prefix}" "$@"
+	cmake --warn-uninitialized -DCMAKE_INSTALL_PREFIX="${_install_prefix}" "$@"
 }
 meson_imovo() {
 	meson setup --prefix "${_install_prefix}" "$@"
