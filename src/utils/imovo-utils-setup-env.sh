@@ -50,9 +50,6 @@ autogen_gnome_latex() {
 autogen_gspell() {
 	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-vala=yes --enable-code-coverage --enable-gtk-doc --enable-installed-tests
 }
-autogen_libgedit_gtksourceview() {
-	./autogen.sh --prefix="${_install_prefix}" --enable-introspection=yes --enable-code-coverage --enable-gtk-doc
-}
 make_parallel() {
 	make -j`nproc`
 }
@@ -65,6 +62,5 @@ export -f meson_gedit
 export -f meson_gedit_plugins
 export -f autogen_gnome_latex
 export -f autogen_gspell
-export -f autogen_libgedit_gtksourceview
 export -f make_parallel
 export -f make_no_deprecations
